@@ -1,6 +1,6 @@
 class Calc:
     def __init__(self, *args, **kwargs):
-        self.stairs_types: dict = (
+        self.stairs_types: tuple = (
             'прямой марш', 
             'два прямых маршей', 
             'угловая', 
@@ -14,9 +14,13 @@ class Calc:
         self._stair_width: float = 0
         self._area: float = 0
 
+        self._angle: int = 90
+        self._r: int = 0
+
         self._number_of_steps: int = 0
         self._step_pitch: float = 0
         self._step: float = 0
+        self.check: float = 0
 
     # calc -->
     def _determining_number_of_steps(self):
@@ -33,10 +37,13 @@ class Calc:
 
     def _check_ergonomic_ratio(self) -> bool:
         # Проверка эргономичного соотношения (допустимые отклонения +- 0.03 м)
-        check = 2 * self._step_height + self._step
-        return True if .60 <= check <= .66 else False
+        self.check = 2 * self._step_height + self._step
+        return True if .60 <= self.check <= .66 else False
 
     # Set vars -->
+    def set_step_hight(self, step_heigh):
+        self._step_height = step_heigh
+
     def set_stair_type(self, stair_type: str):
         self._current_stair_type = stair_type
 
@@ -50,14 +57,20 @@ class Calc:
         self._area = area
 
     # stairs calc
-    def _direct_march(self):
+    def _direct_march(self) -> bool:
         self._determining_number_of_steps()
         self._determining_step_pitch()
         self._determining_step()
         check_result = self._check_ergonomic_ratio()
+        return check_result
 
     def _two_straight_march(self):
-        pass
+        self._determining_number_of_steps()
+        self._number_of_steps /= 2        # TODO: что если дробное?
+        self._determining_step_pitch()
+        self._determining_step()
+        check_result = self._check_ergonomic_ratio()
+        # TODO: Высота маршей
 
     def _corner(self):
         pass
@@ -69,7 +82,8 @@ class Calc:
         pass
 
     # Main calc
-    def calc(self, stair_type: str, stair_widht: float, stair_height: float, area: float):
+    def calc(self, stair_type: str, stair_widht: float, stair_height: float, area: float, step_hight: float = .17):
+        self.set_step_hight(step_hight)
         self.set_stair_type(stair_type)
         self.set_stair_width(stair_widht)
         self.set_stair_height(stair_height)
@@ -83,6 +97,7 @@ class Calc:
                     self._number_of_steps,
                     self._step_height,
                     self._step_pitch,
+                    self.check,
                     check
                 )
             elif type_stair == self.stairs_types[1]: pass

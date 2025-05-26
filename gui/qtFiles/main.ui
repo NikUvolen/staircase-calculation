@@ -7,19 +7,19 @@
     <x>0</x>
     <y>0</y>
     <width>860</width>
-    <height>435</height>
+    <height>430</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
     <width>860</width>
-    <height>435</height>
+    <height>430</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>860</width>
-    <height>435</height>
+    <height>430</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@ background-color: #100A29;</string>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout_5">
        <property name="spacing">
-        <number>15</number>
+        <number>3</number>
        </property>
        <item>
         <widget class="QFrame" name="balance_frame">
@@ -59,122 +59,12 @@ background-color: #100A29;</string>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
+           <layout class="QHBoxLayout" name="stair_type_frame">
             <item>
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="stair_type_label">
               <property name="styleSheet">
-               <string notr="true">border: none;</string>
-              </property>
-              <property name="text">
-               <string>Высота лестницы</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="stair_w">
-              <property name="maximumSize">
-               <size>
-                <width>300</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="focusPolicy">
-               <enum>Qt::StrongFocus</enum>
-              </property>
-              <property name="autoFillBackground">
-               <bool>false</bool>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QLineEdit {
-    border: 2px solid #681E76;  /* Обычная граница */
-    border-radius: 8px;
-    padding: 5px;
-}
-
-QLineEdit:focus {
-    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
-}</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
-            <item>
-             <widget class="QLabel" name="label_3">
-              <property name="styleSheet">
-               <string notr="true">border: none;</string>
-              </property>
-              <property name="text">
-               <string>Ширина лестницы</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="stair_h">
-              <property name="maximumSize">
-               <size>
-                <width>300</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QLineEdit {
-    border: 2px solid #681E76;  /* Обычная граница */
-    border-radius: 8px;
-    padding: 5px;
-}
-
-QLineEdit:focus {
-    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
-}</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
-            <item>
-             <widget class="QLabel" name="label_2">
-              <property name="styleSheet">
-               <string notr="true">border: none;</string>
-              </property>
-              <property name="text">
-               <string>Площадь помещения</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLineEdit" name="area">
-              <property name="maximumSize">
-               <size>
-                <width>300</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">QLineEdit {
-    border: 2px solid #681E76;  /* Обычная граница */
-    border-radius: 8px;
-    padding: 5px;
-}
-
-QLineEdit:focus {
-    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
-}</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QLabel" name="label_4">
-              <property name="styleSheet">
-               <string notr="true">border: none;</string>
+               <string notr="true">font-size: 18px;
+border: none;</string>
               </property>
               <property name="text">
                <string>Тип лестницы</string>
@@ -251,6 +141,312 @@ QComboBox QAbstractItemView {
               </item>
              </widget>
             </item>
+            <item>
+             <widget class="QLabel" name="label_10">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="stair_w_frame">
+            <item>
+             <widget class="QLabel" name="stare_w_label">
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Высота лестницы</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stair_w">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_7">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>м</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="stair_h_frame">
+            <item>
+             <widget class="QLabel" name="stair_h_label">
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Ширина лестницы</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stair_h">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_8">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>м</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="area_frame">
+            <item>
+             <widget class="QLabel" name="area_frame_2">
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Площадь помещения</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="area">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_9">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>м² </string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="step_h_frame">
+            <item>
+             <widget class="QLabel" name="stap_h_label">
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Высота ступеней</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="step_h">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+              <property name="text">
+               <string>0,17</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>м</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="radius_angle_frame">
+            <item>
+             <widget class="QLabel" name="radius_angle_label">
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>Радиус окружности</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="radius_angle">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_22">
+              <property name="maximumSize">
+               <size>
+                <width>20</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">font-size: 18px;
+border: none;</string>
+              </property>
+              <property name="text">
+               <string>м</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
          </layout>
@@ -272,7 +468,8 @@ QComboBox QAbstractItemView {
          </property>
          <property name="styleSheet">
           <string notr="true">border: 2px solid #681E76;
-border-radius: 8px;</string>
+border-radius: 8px;
+overflow: hidden;</string>
          </property>
          <property name="text">
           <string>&lt;image&gt;</string>
@@ -315,8 +512,8 @@ QPushButton:hover {
         <string>Рассчитать</string>
        </property>
        <property name="icon">
-        <iconset resource="icons.qrc">
-         <normaloff>:/icon/icons8-calculator-50.png</normaloff>:/icon/icons8-calculator-50.png</iconset>
+        <iconset resource="gui/qtFiles/icons.qrc">
+         <normaloff>:/icon/calc.png</normaloff>:/icon/calc.png</iconset>
        </property>
        <property name="iconSize">
         <size>
@@ -367,7 +564,7 @@ font-size:28px;</string>
   </widget>
  </widget>
  <resources>
-  <include location="icons.qrc"/>
+  <include location="gui/qtFiles/icons.qrc"/>
  </resources>
  <connections/>
 </ui>

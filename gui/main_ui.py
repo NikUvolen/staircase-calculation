@@ -24,9 +24,9 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(860, 435)
-        MainWindow.setMinimumSize(QSize(860, 435))
-        MainWindow.setMaximumSize(QSize(860, 435))
+        MainWindow.resize(860, 430)
+        MainWindow.setMinimumSize(QSize(860, 430))
+        MainWindow.setMaximumSize(QSize(860, 430))
         MainWindow.setStyleSheet(u"font-family: Consolas;\n"
 "font-size: 16px;\n"
 "\n"
@@ -43,100 +43,21 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5 = QHBoxLayout()
-        self.horizontalLayout_5.setSpacing(15)
+        self.horizontalLayout_5.setSpacing(3)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
         self.balance_frame = QFrame(self.widget)
         self.balance_frame.setObjectName(u"balance_frame")
         self.balance_frame.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.balance_frame)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.horizontalLayout = QHBoxLayout()
-        self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.label = QLabel(self.balance_frame)
-        self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"border: none;")
+        self.stair_type_frame = QHBoxLayout()
+        self.stair_type_frame.setObjectName(u"stair_type_frame")
+        self.stair_type_label = QLabel(self.balance_frame)
+        self.stair_type_label.setObjectName(u"stair_type_label")
+        self.stair_type_label.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
 
-        self.horizontalLayout.addWidget(self.label)
-
-        self.stair_w = QLineEdit(self.balance_frame)
-        self.stair_w.setObjectName(u"stair_w")
-        self.stair_w.setMaximumSize(QSize(300, 16777215))
-        self.stair_w.setFocusPolicy(Qt.StrongFocus)
-        self.stair_w.setAutoFillBackground(False)
-        self.stair_w.setStyleSheet(u"QLineEdit {\n"
-"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
-"    border-radius: 8px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
-"}")
-
-        self.horizontalLayout.addWidget(self.stair_w)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout)
-
-        self.horizontalLayout_3 = QHBoxLayout()
-        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
-        self.label_3 = QLabel(self.balance_frame)
-        self.label_3.setObjectName(u"label_3")
-        self.label_3.setStyleSheet(u"border: none;")
-
-        self.horizontalLayout_3.addWidget(self.label_3)
-
-        self.stair_h = QLineEdit(self.balance_frame)
-        self.stair_h.setObjectName(u"stair_h")
-        self.stair_h.setMaximumSize(QSize(300, 16777215))
-        self.stair_h.setStyleSheet(u"QLineEdit {\n"
-"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
-"    border-radius: 8px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
-"}")
-
-        self.horizontalLayout_3.addWidget(self.stair_h)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout_3)
-
-        self.horizontalLayout_2 = QHBoxLayout()
-        self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
-        self.label_2 = QLabel(self.balance_frame)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setStyleSheet(u"border: none;")
-
-        self.horizontalLayout_2.addWidget(self.label_2)
-
-        self.area = QLineEdit(self.balance_frame)
-        self.area.setObjectName(u"area")
-        self.area.setMaximumSize(QSize(300, 16777215))
-        self.area.setStyleSheet(u"QLineEdit {\n"
-"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
-"    border-radius: 8px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
-"}")
-
-        self.horizontalLayout_2.addWidget(self.area)
-
-
-        self.verticalLayout.addLayout(self.horizontalLayout_2)
-
-        self.horizontalLayout_4 = QHBoxLayout()
-        self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
-        self.label_4 = QLabel(self.balance_frame)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setStyleSheet(u"border: none;")
-
-        self.horizontalLayout_4.addWidget(self.label_4)
+        self.stair_type_frame.addWidget(self.stair_type_label)
 
         self.stair_type = QComboBox(self.balance_frame)
         self.stair_type.addItem("")
@@ -171,10 +92,199 @@ class Ui_MainWindow(object):
 "}\n"
 "")
 
-        self.horizontalLayout_4.addWidget(self.stair_type)
+        self.stair_type_frame.addWidget(self.stair_type)
+
+        self.label_10 = QLabel(self.balance_frame)
+        self.label_10.setObjectName(u"label_10")
+        self.label_10.setMaximumSize(QSize(20, 16777215))
+        self.label_10.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.stair_type_frame.addWidget(self.label_10)
 
 
-        self.verticalLayout.addLayout(self.horizontalLayout_4)
+        self.verticalLayout.addLayout(self.stair_type_frame)
+
+        self.stair_w_frame = QHBoxLayout()
+        self.stair_w_frame.setObjectName(u"stair_w_frame")
+        self.stare_w_label = QLabel(self.balance_frame)
+        self.stare_w_label.setObjectName(u"stare_w_label")
+        self.stare_w_label.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.stair_w_frame.addWidget(self.stare_w_label)
+
+        self.stair_w = QLineEdit(self.balance_frame)
+        self.stair_w.setObjectName(u"stair_w")
+        self.stair_w.setMaximumSize(QSize(300, 16777215))
+        self.stair_w.setFocusPolicy(Qt.StrongFocus)
+        self.stair_w.setAutoFillBackground(False)
+        self.stair_w.setStyleSheet(u"QLineEdit {\n"
+"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
+"    border-radius: 8px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
+"}")
+
+        self.stair_w_frame.addWidget(self.stair_w)
+
+        self.label_7 = QLabel(self.balance_frame)
+        self.label_7.setObjectName(u"label_7")
+        self.label_7.setMaximumSize(QSize(20, 16777215))
+        self.label_7.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.stair_w_frame.addWidget(self.label_7)
+
+
+        self.verticalLayout.addLayout(self.stair_w_frame)
+
+        self.stair_h_frame = QHBoxLayout()
+        self.stair_h_frame.setObjectName(u"stair_h_frame")
+        self.stair_h_label = QLabel(self.balance_frame)
+        self.stair_h_label.setObjectName(u"stair_h_label")
+        self.stair_h_label.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.stair_h_frame.addWidget(self.stair_h_label)
+
+        self.stair_h = QLineEdit(self.balance_frame)
+        self.stair_h.setObjectName(u"stair_h")
+        self.stair_h.setMaximumSize(QSize(300, 16777215))
+        self.stair_h.setStyleSheet(u"QLineEdit {\n"
+"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
+"    border-radius: 8px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
+"}")
+
+        self.stair_h_frame.addWidget(self.stair_h)
+
+        self.label_8 = QLabel(self.balance_frame)
+        self.label_8.setObjectName(u"label_8")
+        self.label_8.setMaximumSize(QSize(20, 16777215))
+        self.label_8.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.stair_h_frame.addWidget(self.label_8)
+
+
+        self.verticalLayout.addLayout(self.stair_h_frame)
+
+        self.area_frame = QHBoxLayout()
+        self.area_frame.setObjectName(u"area_frame")
+        self.area_frame_2 = QLabel(self.balance_frame)
+        self.area_frame_2.setObjectName(u"area_frame_2")
+        self.area_frame_2.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.area_frame.addWidget(self.area_frame_2)
+
+        self.area = QLineEdit(self.balance_frame)
+        self.area.setObjectName(u"area")
+        self.area.setMaximumSize(QSize(300, 16777215))
+        self.area.setStyleSheet(u"QLineEdit {\n"
+"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
+"    border-radius: 8px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
+"}")
+
+        self.area_frame.addWidget(self.area)
+
+        self.label_9 = QLabel(self.balance_frame)
+        self.label_9.setObjectName(u"label_9")
+        self.label_9.setMaximumSize(QSize(20, 16777215))
+        self.label_9.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.area_frame.addWidget(self.label_9)
+
+
+        self.verticalLayout.addLayout(self.area_frame)
+
+        self.step_h_frame = QHBoxLayout()
+        self.step_h_frame.setObjectName(u"step_h_frame")
+        self.stap_h_label = QLabel(self.balance_frame)
+        self.stap_h_label.setObjectName(u"stap_h_label")
+        self.stap_h_label.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.step_h_frame.addWidget(self.stap_h_label)
+
+        self.step_h = QLineEdit(self.balance_frame)
+        self.step_h.setObjectName(u"step_h")
+        self.step_h.setMaximumSize(QSize(300, 16777215))
+        self.step_h.setFocusPolicy(Qt.StrongFocus)
+        self.step_h.setAutoFillBackground(False)
+        self.step_h.setStyleSheet(u"QLineEdit {\n"
+"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
+"    border-radius: 8px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
+"}")
+
+        self.step_h_frame.addWidget(self.step_h)
+
+        self.label_18 = QLabel(self.balance_frame)
+        self.label_18.setObjectName(u"label_18")
+        self.label_18.setMaximumSize(QSize(20, 16777215))
+        self.label_18.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.step_h_frame.addWidget(self.label_18)
+
+
+        self.verticalLayout.addLayout(self.step_h_frame)
+
+        self.radius_angle_frame = QHBoxLayout()
+        self.radius_angle_frame.setObjectName(u"radius_angle_frame")
+        self.radius_angle_label = QLabel(self.balance_frame)
+        self.radius_angle_label.setObjectName(u"radius_angle_label")
+        self.radius_angle_label.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.radius_angle_frame.addWidget(self.radius_angle_label)
+
+        self.radius_angle = QLineEdit(self.balance_frame)
+        self.radius_angle.setObjectName(u"radius_angle")
+        self.radius_angle.setMaximumSize(QSize(300, 16777215))
+        self.radius_angle.setFocusPolicy(Qt.StrongFocus)
+        self.radius_angle.setAutoFillBackground(False)
+        self.radius_angle.setStyleSheet(u"QLineEdit {\n"
+"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
+"    border-radius: 8px;\n"
+"    padding: 5px;\n"
+"}\n"
+"\n"
+"QLineEdit:focus {\n"
+"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
+"}")
+
+        self.radius_angle_frame.addWidget(self.radius_angle)
+
+        self.label_22 = QLabel(self.balance_frame)
+        self.label_22.setObjectName(u"label_22")
+        self.label_22.setMaximumSize(QSize(20, 16777215))
+        self.label_22.setStyleSheet(u"font-size: 18px;\n"
+"border: none;")
+
+        self.radius_angle_frame.addWidget(self.label_22)
+
+
+        self.verticalLayout.addLayout(self.radius_angle_frame)
 
 
         self.horizontalLayout_5.addWidget(self.balance_frame)
@@ -184,7 +294,8 @@ class Ui_MainWindow(object):
         self.image.setMinimumSize(QSize(260, 260))
         self.image.setMaximumSize(QSize(260, 260))
         self.image.setStyleSheet(u"border: 2px solid #681E76;\n"
-"border-radius: 8px;")
+"border-radius: 8px;\n"
+"overflow: hidden;")
 
         self.horizontalLayout_5.addWidget(self.image)
 
@@ -211,7 +322,7 @@ class Ui_MainWindow(object):
 "\n"
 "")
         icon = QIcon()
-        icon.addFile(u":/icon/icons8-calculator-50.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        icon.addFile(u":/icon/calc.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
         self.pushButton.setIcon(icon)
         self.pushButton.setIconSize(QSize(25, 25))
 
@@ -245,16 +356,26 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Staircase Calculation", None))
-        self.label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0441\u043e\u0442\u0430 \u043b\u0435\u0441\u0442\u043d\u0438\u0446\u044b", None))
-        self.label_3.setText(QCoreApplication.translate("MainWindow", u"\u0428\u0438\u0440\u0438\u043d\u0430 \u043b\u0435\u0441\u0442\u043d\u0438\u0446\u044b", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043b\u043e\u0449\u0430\u0434\u044c \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u044f", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0422\u0438\u043f \u043b\u0435\u0441\u0442\u043d\u0438\u0446\u044b", None))
+        self.stair_type_label.setText(QCoreApplication.translate("MainWindow", u"\u0422\u0438\u043f \u043b\u0435\u0441\u0442\u043d\u0438\u0446\u044b", None))
         self.stair_type.setItemText(0, QCoreApplication.translate("MainWindow", u"\u043f\u0440\u044f\u043c\u043e\u0439 \u043c\u0430\u0440\u0448", None))
         self.stair_type.setItemText(1, QCoreApplication.translate("MainWindow", u"\u0434\u0432\u0430 \u043f\u0440\u044f\u043c\u044b\u0445 \u043c\u0430\u0440\u0448\u0435\u0439", None))
         self.stair_type.setItemText(2, QCoreApplication.translate("MainWindow", u"\u0443\u0433\u043b\u043e\u0432\u0430\u044f", None))
         self.stair_type.setItemText(3, QCoreApplication.translate("MainWindow", u"\u0432\u0438\u043d\u0442\u043e\u0432\u0430\u044f", None))
         self.stair_type.setItemText(4, QCoreApplication.translate("MainWindow", u"\u043f\u043e\u0432\u043e\u0440\u043e\u0442\u043d\u0430\u044f", None))
 
+        self.label_10.setText("")
+        self.stare_w_label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0441\u043e\u0442\u0430 \u043b\u0435\u0441\u0442\u043d\u0438\u0446\u044b", None))
+        self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u043c", None))
+        self.stair_h_label.setText(QCoreApplication.translate("MainWindow", u"\u0428\u0438\u0440\u0438\u043d\u0430 \u043b\u0435\u0441\u0442\u043d\u0438\u0446\u044b", None))
+        self.label_8.setText(QCoreApplication.translate("MainWindow", u"\u043c", None))
+        self.area_frame_2.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043b\u043e\u0449\u0430\u0434\u044c \u043f\u043e\u043c\u0435\u0449\u0435\u043d\u0438\u044f", None))
+        self.label_9.setText(QCoreApplication.translate("MainWindow", u"\u043c\u00b2 ", None))
+        self.stap_h_label.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0441\u043e\u0442\u0430 \u0441\u0442\u0443\u043f\u0435\u043d\u0435\u0439", None))
+        self.step_h.setText(QCoreApplication.translate("MainWindow", u"0,17", None))
+        self.label_18.setText(QCoreApplication.translate("MainWindow", u"\u043c", None))
+        self.radius_angle_label.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0434\u0438\u0443\u0441 \u043e\u043a\u0440\u0443\u0436\u043d\u043e\u0441\u0442\u0438", None))
+        self.radius_angle.setText("")
+        self.label_22.setText(QCoreApplication.translate("MainWindow", u"\u043c", None))
         self.image.setText(QCoreApplication.translate("MainWindow", u"<image>", None))
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044c", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Staircase ", None))
