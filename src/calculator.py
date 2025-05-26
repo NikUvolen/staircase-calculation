@@ -1,6 +1,6 @@
 class Calc:
     def __init__(self, *args, **kwargs):
-        self.stairs_types: tuple = (
+        self.stairs_types: dict = (
             'прямой марш', 
             'два прямых маршей', 
             'угловая', 
@@ -77,7 +77,14 @@ class Calc:
 
         type_stair = self._current_stair_type
         if type_stair in self.stairs_types:
-            if type_stair == self.stairs_types[0]: pass
+            if type_stair == self.stairs_types[0]: 
+                check = self._direct_march()
+                return (
+                    self._number_of_steps,
+                    self._step_height,
+                    self._step_pitch,
+                    check
+                )
             elif type_stair == self.stairs_types[1]: pass
             elif type_stair == self.stairs_types[2]: pass
             elif type_stair == self.stairs_types[3]: pass

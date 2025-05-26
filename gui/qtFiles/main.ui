@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>860</width>
+    <height>435</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>860</width>
+    <height>435</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>860</width>
+    <height>435</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Staircase Calculation</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font-family: Consolas;
+font-size: 16px;
+
+color: white;
+
+background-color: #100A29;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>811</width>
+      <height>320</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <property name="spacing">
+        <number>15</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="balance_frame">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>Высота лестницы</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stair_w">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::StrongFocus</enum>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_3">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>Ширина лестницы</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="stair_h">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>Площадь помещения</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="area">
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    border: 2px solid #681E76;  /* Обычная граница */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_4">
+              <property name="styleSheet">
+               <string notr="true">border: none;</string>
+              </property>
+              <property name="text">
+               <string>Тип лестницы</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QComboBox" name="stair_type">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>300</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>300</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="cursor">
+               <cursorShape>PointingHandCursor</cursorShape>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">/* Обычное состояние */
+QComboBox {
+    border: 2px solid #681E76;
+    border-radius: 8px;
+    padding: 5px;
+    selection-background-color: #C33278;
+}
+
+/* Состояние при фокусе */
+QComboBox:focus {
+    border: 2px solid #C33278;  /* Синий акцентный цвет */
+    outline: none;
+}
+
+/* Выпадающий список */
+QComboBox QAbstractItemView {
+    border: 2px solid #681E76;
+    selection-background-color: #C33278;
+    selection-color: white;
+}
+</string>
+              </property>
+              <item>
+               <property name="text">
+                <string>прямой марш</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>два прямых маршей</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>угловая</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>винтовая</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>поворотная</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="image">
+         <property name="minimumSize">
+          <size>
+           <width>260</width>
+           <height>260</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>260</width>
+           <height>260</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">border: 2px solid #681E76;
+border-radius: 8px;</string>
+         </property>
+         <property name="text">
+          <string>&lt;image&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="acceptDrops">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	font-weight: 700;
+    background-color: #681E76;  /* Ваш цвет из дизайна */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #C33278;
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string>Рассчитать</string>
+       </property>
+       <property name="icon">
+        <iconset resource="icons.qrc">
+         <normaloff>:/icon/icons8-calculator-50.png</normaloff>:/icon/icons8-calculator-50.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>25</width>
+         <height>25</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QFrame" name="Title">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>225</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font-weight:700;
+font-size:28px;</string>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_3">
+     <item>
+      <widget class="QLabel" name="label_5">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Staircase </string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>Calculation</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
+ <connections/>
+</ui>
