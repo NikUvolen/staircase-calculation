@@ -23,10 +23,8 @@ class Ui_Allresult(object):
     def setupUi(self, Allresult):
         if not Allresult.objectName():
             Allresult.setObjectName(u"Allresult")
-        Allresult.resize(1559, 640)
-        Allresult.setStyleSheet(u"font-family: Consolas;\n"
-"font-size: 16px;\n"
-"\n"
+        Allresult.resize(1707, 801)
+        Allresult.setStyleSheet(u"font: 16px \"Comic Sans MS\";\n"
 "color: white;\n"
 "\n"
 "background-color: #100A29;")
@@ -36,6 +34,7 @@ class Ui_Allresult(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.frame = QFrame(self.centralwidget)
         self.frame.setObjectName(u"frame")
+        self.frame.setStyleSheet(u"margin:5px;")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout = QVBoxLayout(self.frame)
@@ -48,12 +47,14 @@ class Ui_Allresult(object):
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.label_5 = QLabel(self.Title)
         self.label_5.setObjectName(u"label_5")
+        self.label_5.setMaximumSize(QSize(16777215, 40))
         self.label_5.setStyleSheet(u"")
 
         self.verticalLayout_3.addWidget(self.label_5)
 
         self.label_6 = QLabel(self.Title)
         self.label_6.setObjectName(u"label_6")
+        self.label_6.setMaximumSize(QSize(16777215, 40))
         self.label_6.setStyleSheet(u"")
 
         self.verticalLayout_3.addWidget(self.label_6)
@@ -89,16 +90,19 @@ class Ui_Allresult(object):
 "        padding: 5px;\n"
 "        border: none;\n"
 "        font-weight: bold;\n"
+"		height:30px;\n"
 "    }\n"
 "    \n"
 "QHeaderView {\n"
 "        background-color: transparent;\n"
+"		font-size:16px;\n"
 "}")
         self.tableWidget.setEditTriggers(QAbstractItemView.NoEditTriggers)
         self.tableWidget.setGridStyle(Qt.DashLine)
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setStretchLastSection(False)
         self.tableWidget.verticalHeader().setCascadingSectionResizes(False)
+        self.tableWidget.verticalHeader().setMinimumSectionSize(40)
         self.tableWidget.verticalHeader().setStretchLastSection(False)
 
         self.verticalLayout.addWidget(self.tableWidget)

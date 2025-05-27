@@ -23,18 +23,17 @@ class Ui_Dialog(object):
     def setupUi(self, Dialog):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
-        Dialog.resize(480, 350)
-        Dialog.setMinimumSize(QSize(480, 350))
-        Dialog.setMaximumSize(QSize(480, 350))
-        Dialog.setStyleSheet(u"font-family: Consolas;\n"
-"font-size: 16px;\n"
+        Dialog.resize(480, 320)
+        Dialog.setMinimumSize(QSize(480, 320))
+        Dialog.setMaximumSize(QSize(480, 320))
+        Dialog.setStyleSheet(u"font: 16px \"Comic Sans MS\";\n"
 "\n"
 "color: white;\n"
 "\n"
 "background-color: #100A29;")
         self.Title = QFrame(Dialog)
         self.Title.setObjectName(u"Title")
-        self.Title.setGeometry(QRect(20, 20, 225, 71))
+        self.Title.setGeometry(QRect(20, 0, 225, 81))
         self.Title.setStyleSheet(u"font-weight:700;\n"
 "font-size:28px;")
         self.verticalLayout_3 = QVBoxLayout(self.Title)
@@ -53,7 +52,7 @@ class Ui_Dialog(object):
 
         self.layoutWidget = QWidget(Dialog)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(30, 114, 421, 209))
+        self.layoutWidget.setGeometry(QRect(30, 100, 421, 209))
         self.verticalLayout = QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)

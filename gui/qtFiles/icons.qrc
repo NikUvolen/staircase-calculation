@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icon">
+    <file>arrow.png</file>
     <file>calc.png</file>
+    <file>clock.png</file>
   </qresource>
 </RCC>

@@ -24,11 +24,10 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(860, 430)
-        MainWindow.setMinimumSize(QSize(860, 430))
-        MainWindow.setMaximumSize(QSize(860, 430))
-        MainWindow.setStyleSheet(u"font-family: Consolas;\n"
-"font-size: 16px;\n"
+        MainWindow.resize(860, 480)
+        MainWindow.setMinimumSize(QSize(860, 480))
+        MainWindow.setMaximumSize(QSize(860, 480))
+        MainWindow.setStyleSheet(u"font: 16px \"Comic Sans MS\";\n"
 "\n"
 "color: white;\n"
 "\n"
@@ -38,7 +37,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setStyleSheet(u"")
         self.layoutWidget = QWidget(self.centralwidget)
         self.layoutWidget.setObjectName(u"layoutWidget")
-        self.layoutWidget.setGeometry(QRect(20, 100, 811, 320))
+        self.layoutWidget.setGeometry(QRect(20, 100, 811, 380))
         self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -70,33 +69,47 @@ class Ui_MainWindow(object):
         self.stair_type.setMinimumSize(QSize(300, 0))
         self.stair_type.setMaximumSize(QSize(300, 16777215))
         self.stair_type.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
-        self.stair_type.setStyleSheet(u"/* \u041e\u0431\u044b\u0447\u043d\u043e\u0435 \u0441\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435 */\n"
+        self.stair_type.setStyleSheet(u"/* \u041e\u0441\u043d\u043e\u0432\u043d\u043e\u0439 \u0441\u0442\u0438\u043b\u044c ComboBox */\n"
 "QComboBox {\n"
 "    border: 2px solid #681E76;\n"
 "    border-radius: 8px;\n"
-"    padding: 5px;\n"
+"    padding: 5px 25px 5px 10px;\n"
 "    selection-background-color: #C33278;\n"
+"    selection-color: white;\n"
+"}\n"
+"\n"
+"/* \u041e\u0431\u043b\u0430\u0441\u0442\u044c \u0441\u0442\u0440\u0435\u043b\u043a\u0438 */\n"
+"QComboBox::drop-down {\n"
+"    subcontrol-origin: padding;\n"
+"    subcontrol-position: right center;\n"
+"    width: 25px;\n"
+"    border-left: 1px solid #681E76;\n"
+"}\n"
+"\n"
+"/* Unicode-\u0441\u0442\u0440\u0435\u043b\u043a\u0430 \u0441 \u0441\u043e\u0445\u0440\u0430\u043d\u0435\u043d\u0438\u0435\u043c \u043e\u0444\u043e\u0440\u043c\u043b\u0435\u043d\u0438\u044f */\n"
+"QComboBox::down-arrow {\n"
+"    image: url(:/icon/arrow.png);\n"
+"    width: 16px;\n"
+"    height: 16px;\n"
 "}\n"
 "\n"
 "/* \u0421\u043e\u0441\u0442\u043e\u044f\u043d\u0438\u0435 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 */\n"
-"QComboBox:focus {\n"
-"    border: 2px solid #C33278;  /* \u0421\u0438\u043d\u0438\u0439 \u0430\u043a\u0446\u0435\u043d\u0442\u043d\u044b\u0439 \u0446\u0432\u0435\u0442 */\n"
-"    outline: none;\n"
+"QComboBox:fo"
+                        "cus {\n"
+"    border-color: #C33278;\n"
 "}\n"
 "\n"
 "/* \u0412\u044b\u043f\u0430\u0434\u0430\u044e\u0449\u0438\u0439 \u0441\u043f\u0438\u0441\u043e\u043a */\n"
 "QComboBox QAbstractItemView {\n"
 "    border: 2px solid #681E76;\n"
 "    selection-background-color: #C33278;\n"
-"    selection-color: white;\n"
-"}\n"
-"")
+"}")
 
         self.stair_type_frame.addWidget(self.stair_type)
 
         self.label_10 = QLabel(self.balance_frame)
         self.label_10.setObjectName(u"label_10")
-        self.label_10.setMaximumSize(QSize(20, 16777215))
+        self.label_10.setMaximumSize(QSize(25, 16777215))
         self.label_10.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
@@ -133,7 +146,7 @@ class Ui_MainWindow(object):
 
         self.label_7 = QLabel(self.balance_frame)
         self.label_7.setObjectName(u"label_7")
-        self.label_7.setMaximumSize(QSize(20, 16777215))
+        self.label_7.setMaximumSize(QSize(25, 16777215))
         self.label_7.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
@@ -168,7 +181,7 @@ class Ui_MainWindow(object):
 
         self.label_8 = QLabel(self.balance_frame)
         self.label_8.setObjectName(u"label_8")
-        self.label_8.setMaximumSize(QSize(20, 16777215))
+        self.label_8.setMaximumSize(QSize(25, 16777215))
         self.label_8.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
@@ -203,7 +216,7 @@ class Ui_MainWindow(object):
 
         self.label_9 = QLabel(self.balance_frame)
         self.label_9.setObjectName(u"label_9")
-        self.label_9.setMaximumSize(QSize(20, 16777215))
+        self.label_9.setMaximumSize(QSize(25, 16777215))
         self.label_9.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
@@ -240,7 +253,7 @@ class Ui_MainWindow(object):
 
         self.label_18 = QLabel(self.balance_frame)
         self.label_18.setObjectName(u"label_18")
-        self.label_18.setMaximumSize(QSize(20, 16777215))
+        self.label_18.setMaximumSize(QSize(25, 16777215))
         self.label_18.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
@@ -277,7 +290,7 @@ class Ui_MainWindow(object):
 
         self.label_22 = QLabel(self.balance_frame)
         self.label_22.setObjectName(u"label_22")
-        self.label_22.setMaximumSize(QSize(20, 16777215))
+        self.label_22.setMaximumSize(QSize(25, 16777215))
         self.label_22.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
@@ -305,6 +318,7 @@ class Ui_MainWindow(object):
         self.pushButton = QPushButton(self.layoutWidget)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setMinimumSize(QSize(0, 40))
+        self.pushButton.setMaximumSize(QSize(16777202, 16777215))
         self.pushButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.pushButton.setAcceptDrops(False)
         self.pushButton.setStyleSheet(u"QPushButton {\n"
@@ -330,7 +344,7 @@ class Ui_MainWindow(object):
 
         self.Title = QFrame(self.centralwidget)
         self.Title.setObjectName(u"Title")
-        self.Title.setGeometry(QRect(20, 20, 225, 71))
+        self.Title.setGeometry(QRect(20, 10, 225, 81))
         self.Title.setStyleSheet(u"font-weight:700;\n"
 "font-size:28px;")
         self.verticalLayout_3 = QVBoxLayout(self.Title)
@@ -349,7 +363,7 @@ class Ui_MainWindow(object):
 
         self.btn_results = QPushButton(self.centralwidget)
         self.btn_results.setObjectName(u"btn_results")
-        self.btn_results.setGeometry(QRect(620, 30, 211, 40))
+        self.btn_results.setGeometry(QRect(600, 30, 231, 40))
         self.btn_results.setMinimumSize(QSize(0, 40))
         self.btn_results.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
         self.btn_results.setAcceptDrops(False)
@@ -367,8 +381,10 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "")
-        self.btn_results.setIcon(icon)
-        self.btn_results.setIconSize(QSize(0, 16))
+        icon1 = QIcon()
+        icon1.addFile(u":/icon/clock.png", QSize(), QIcon.Mode.Normal, QIcon.State.Off)
+        self.btn_results.setIcon(icon1)
+        self.btn_results.setIconSize(QSize(25, 25))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)

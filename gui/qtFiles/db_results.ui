@@ -6,17 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1559</width>
-    <height>640</height>
+    <width>1707</width>
+    <height>801</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>All result</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">font-family: Consolas;
-font-size: 16px;
-
+   <string notr="true">font: 16px &quot;Comic Sans MS&quot;;
 color: white;
 
 background-color: #100A29;</string>
@@ -44,6 +42,12 @@ font-size:28px;</string>
          <layout class="QVBoxLayout" name="verticalLayout_3">
           <item>
            <widget class="QLabel" name="label_5">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -54,6 +58,12 @@ font-size:28px;</string>
           </item>
           <item>
            <widget class="QLabel" name="label_6">
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>40</height>
+             </size>
+            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -74,10 +84,12 @@ font-size:28px;</string>
         padding: 5px;
         border: none;
         font-weight: bold;
+		height:30px;
     }
     
 QHeaderView {
         background-color: transparent;
+		font-size:16px;
 }</string>
          </property>
          <property name="editTriggers">
@@ -94,6 +106,9 @@ QHeaderView {
          </attribute>
          <attribute name="verticalHeaderCascadingSectionResizes">
           <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderMinimumSectionSize">
+          <number>40</number>
          </attribute>
          <attribute name="verticalHeaderStretchLastSection">
           <bool>false</bool>
