@@ -69,7 +69,7 @@ font-size:28px;</string>
     </item>
    </layout>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>30</x>
@@ -82,7 +82,7 @@ font-size:28px;</string>
     <item>
      <layout class="QHBoxLayout" name="StepCount">
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="step_count_label">
         <property name="styleSheet">
          <string notr="true">font-size: 18px;
 border: none;</string>
@@ -197,50 +197,17 @@ QLineEdit:focus {
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="StepsMarch">
-      <item>
-       <widget class="QLabel" name="label_4">
-        <property name="styleSheet">
-         <string notr="true">font-size: 18px;
-border: none;</string>
-        </property>
-        <property name="text">
-         <string>Ступеней в марше</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLineEdit" name="step_in_march">
-        <property name="maximumSize">
-         <size>
-          <width>220</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">QLineEdit {
-    border: 2px solid #681E76;  /* Обычная граница */
-    border-radius: 8px;
-    padding: 5px;
-}
-
-QLineEdit:focus {
-    border: 2px solid #C33278;  /* Граница при фокусе (синяя) */
-}</string>
-        </property>
-        <property name="readOnly">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item>
      <widget class="QLabel" name="result_label">
       <property name="minimumSize">
        <size>
         <width>0</width>
-        <height>35</height>
+        <height>40</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>40</height>
        </size>
       </property>
       <property name="styleSheet">

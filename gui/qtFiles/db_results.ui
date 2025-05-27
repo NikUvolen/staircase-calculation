@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Allresult</class>
+ <widget class="QMainWindow" name="Allresult">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1559</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>All result</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font-family: Consolas;
+font-size: 16px;
+
+color: white;
+
+background-color: #100A29;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">margin:5px;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QWidget" name="Title" native="true">
+         <property name="styleSheet">
+          <string notr="true">font-weight:700;
+font-size:28px;</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Results</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_6">
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Calculation</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="styleSheet">
+          <string notr="true">QHeaderView::section {
+        background-color: #681E76;
+        color: white;
+        padding: 5px;
+        border: none;
+        font-weight: bold;
+    }
+    
+QHeaderView {
+        background-color: transparent;
+}</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::DashLine</enum>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderStretchLastSection">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Высота лестницы</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Ширина лестницы</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Площадь размещения</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Высота ступеней</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Угол/радиус</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Количество ступеней</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Шаг ступеней</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Эрогономическое соотношение</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Тип лестницы</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

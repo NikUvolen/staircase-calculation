@@ -51,22 +51,22 @@ class Ui_Dialog(object):
 
         self.verticalLayout_3.addWidget(self.label_6)
 
-        self.widget = QWidget(Dialog)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(30, 114, 421, 209))
-        self.verticalLayout = QVBoxLayout(self.widget)
+        self.layoutWidget = QWidget(Dialog)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(30, 114, 421, 209))
+        self.verticalLayout = QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.StepCount = QHBoxLayout()
         self.StepCount.setObjectName(u"StepCount")
-        self.label = QLabel(self.widget)
-        self.label.setObjectName(u"label")
-        self.label.setStyleSheet(u"font-size: 18px;\n"
+        self.step_count_label = QLabel(self.layoutWidget)
+        self.step_count_label.setObjectName(u"step_count_label")
+        self.step_count_label.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
-        self.StepCount.addWidget(self.label)
+        self.StepCount.addWidget(self.step_count_label)
 
-        self.step_count = QLineEdit(self.widget)
+        self.step_count = QLineEdit(self.layoutWidget)
         self.step_count.setObjectName(u"step_count")
         self.step_count.setMaximumSize(QSize(220, 16777215))
         self.step_count.setStyleSheet(u"QLineEdit {\n"
@@ -87,14 +87,14 @@ class Ui_Dialog(object):
 
         self.StepHight = QHBoxLayout()
         self.StepHight.setObjectName(u"StepHight")
-        self.label_3 = QLabel(self.widget)
+        self.label_3 = QLabel(self.layoutWidget)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
         self.StepHight.addWidget(self.label_3)
 
-        self.step_hight = QLineEdit(self.widget)
+        self.step_hight = QLineEdit(self.layoutWidget)
         self.step_hight.setObjectName(u"step_hight")
         self.step_hight.setMaximumSize(QSize(220, 16777215))
         self.step_hight.setStyleSheet(u"QLineEdit {\n"
@@ -115,14 +115,14 @@ class Ui_Dialog(object):
 
         self.StepPitch = QHBoxLayout()
         self.StepPitch.setObjectName(u"StepPitch")
-        self.label_2 = QLabel(self.widget)
+        self.label_2 = QLabel(self.layoutWidget)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setStyleSheet(u"font-size: 18px;\n"
 "border: none;")
 
         self.StepPitch.addWidget(self.label_2)
 
-        self.step_pitch = QLineEdit(self.widget)
+        self.step_pitch = QLineEdit(self.layoutWidget)
         self.step_pitch.setObjectName(u"step_pitch")
         self.step_pitch.setMaximumSize(QSize(220, 16777215))
         self.step_pitch.setStyleSheet(u"QLineEdit {\n"
@@ -141,37 +141,10 @@ class Ui_Dialog(object):
 
         self.verticalLayout.addLayout(self.StepPitch)
 
-        self.StepsMarch = QHBoxLayout()
-        self.StepsMarch.setObjectName(u"StepsMarch")
-        self.label_4 = QLabel(self.widget)
-        self.label_4.setObjectName(u"label_4")
-        self.label_4.setStyleSheet(u"font-size: 18px;\n"
-"border: none;")
-
-        self.StepsMarch.addWidget(self.label_4)
-
-        self.step_in_march = QLineEdit(self.widget)
-        self.step_in_march.setObjectName(u"step_in_march")
-        self.step_in_march.setMaximumSize(QSize(220, 16777215))
-        self.step_in_march.setStyleSheet(u"QLineEdit {\n"
-"    border: 2px solid #681E76;  /* \u041e\u0431\u044b\u0447\u043d\u0430\u044f \u0433\u0440\u0430\u043d\u0438\u0446\u0430 */\n"
-"    border-radius: 8px;\n"
-"    padding: 5px;\n"
-"}\n"
-"\n"
-"QLineEdit:focus {\n"
-"    border: 2px solid #C33278;  /* \u0413\u0440\u0430\u043d\u0438\u0446\u0430 \u043f\u0440\u0438 \u0444\u043e\u043a\u0443\u0441\u0435 (\u0441\u0438\u043d\u044f\u044f) */\n"
-"}")
-        self.step_in_march.setReadOnly(True)
-
-        self.StepsMarch.addWidget(self.step_in_march)
-
-
-        self.verticalLayout.addLayout(self.StepsMarch)
-
-        self.result_label = QLabel(self.widget)
+        self.result_label = QLabel(self.layoutWidget)
         self.result_label.setObjectName(u"result_label")
-        self.result_label.setMinimumSize(QSize(0, 35))
+        self.result_label.setMinimumSize(QSize(0, 40))
+        self.result_label.setMaximumSize(QSize(16777215, 40))
         self.result_label.setStyleSheet(u"font-size: 18px;\n"
 "border: none;\n"
 "background-color:#007439;\n"
@@ -190,10 +163,9 @@ class Ui_Dialog(object):
         Dialog.setWindowTitle(QCoreApplication.translate("Dialog", u"Calc result", None))
         self.label_5.setText(QCoreApplication.translate("Dialog", u"Result", None))
         self.label_6.setText(QCoreApplication.translate("Dialog", u"Calculation", None))
-        self.label.setText(QCoreApplication.translate("Dialog", u"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u0442\u0443\u043f\u0435\u043d\u0435\u0439", None))
+        self.step_count_label.setText(QCoreApplication.translate("Dialog", u"\u041a\u043e\u043b\u0438\u0447\u0435\u0441\u0442\u0432\u043e \u0441\u0442\u0443\u043f\u0435\u043d\u0435\u0439", None))
         self.label_3.setText(QCoreApplication.translate("Dialog", u"\u0412\u044b\u0441\u043e\u0442\u0430 \u0441\u0442\u0443\u043f\u0435\u043d\u0435\u0439", None))
         self.label_2.setText(QCoreApplication.translate("Dialog", u"\u0428\u0430\u0433 \u0441\u0442\u0443\u043f\u0435\u043d\u0435\u0439", None))
-        self.label_4.setText(QCoreApplication.translate("Dialog", u"\u0421\u0442\u0443\u043f\u0435\u043d\u0435\u0439 \u0432 \u043c\u0430\u0440\u0448\u0435", None))
-        self.result_label.setText(QCoreApplication.translate("Dialog", u"\u041e\u0442\u043a\u043b\u043e\u043d\u0435\u043d\u0438\u0435 \u043d\u0430 ", None))
+        self.result_label.setText(QCoreApplication.translate("Dialog", u"\u041e\u0442\u043a\u043b\u043e\u043d\u0435\u043d\u0438\u0435 \u0432 \u043f\u0440\u0435\u0434\u0435\u043b\u0430\u0445 \u043d\u043e\u0440\u043c\u044b", None))
     # retranslateUi
 

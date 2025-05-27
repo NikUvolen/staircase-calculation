@@ -18,7 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
     QLabel, QLineEdit, QMainWindow, QPushButton,
     QSizePolicy, QVBoxLayout, QWidget)
-import gui.res_main_window
+import gui.icons_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -36,16 +36,16 @@ class Ui_MainWindow(object):
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
         self.centralwidget.setStyleSheet(u"")
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(20, 100, 811, 320))
-        self.verticalLayout_2 = QVBoxLayout(self.widget)
+        self.layoutWidget = QWidget(self.centralwidget)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(20, 100, 811, 320))
+        self.verticalLayout_2 = QVBoxLayout(self.layoutWidget)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
         self.horizontalLayout_5 = QHBoxLayout()
         self.horizontalLayout_5.setSpacing(3)
         self.horizontalLayout_5.setObjectName(u"horizontalLayout_5")
-        self.balance_frame = QFrame(self.widget)
+        self.balance_frame = QFrame(self.layoutWidget)
         self.balance_frame.setObjectName(u"balance_frame")
         self.balance_frame.setStyleSheet(u"")
         self.verticalLayout = QVBoxLayout(self.balance_frame)
@@ -289,7 +289,7 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_5.addWidget(self.balance_frame)
 
-        self.image = QLabel(self.widget)
+        self.image = QLabel(self.layoutWidget)
         self.image.setObjectName(u"image")
         self.image.setMinimumSize(QSize(260, 260))
         self.image.setMaximumSize(QSize(260, 260))
@@ -302,7 +302,7 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_5)
 
-        self.pushButton = QPushButton(self.widget)
+        self.pushButton = QPushButton(self.layoutWidget)
         self.pushButton.setObjectName(u"pushButton")
         self.pushButton.setMinimumSize(QSize(0, 40))
         self.pushButton.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
@@ -347,6 +347,28 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_3.addWidget(self.label_6)
 
+        self.btn_results = QPushButton(self.centralwidget)
+        self.btn_results.setObjectName(u"btn_results")
+        self.btn_results.setGeometry(QRect(620, 30, 211, 40))
+        self.btn_results.setMinimumSize(QSize(0, 40))
+        self.btn_results.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
+        self.btn_results.setAcceptDrops(False)
+        self.btn_results.setStyleSheet(u"QPushButton {\n"
+"	font-weight: 700;\n"
+"    background-color: #681E76;  /* \u0412\u0430\u0448 \u0446\u0432\u0435\u0442 \u0438\u0437 \u0434\u0438\u0437\u0430\u0439\u043d\u0430 */\n"
+"    color: white;\n"
+"    border: none;\n"
+"    border-radius: 8px;\n"
+"    padding: 8px 16px;\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #C33278;\n"
+"}\n"
+"\n"
+"")
+        self.btn_results.setIcon(icon)
+        self.btn_results.setIconSize(QSize(0, 16))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -380,5 +402,6 @@ class Ui_MainWindow(object):
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044c", None))
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"Staircase ", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"Calculation", None))
+        self.btn_results.setText(QCoreApplication.translate("MainWindow", u"\u0420\u0435\u0437\u0443\u043b\u044c\u0442\u0430\u0442\u044b \u0437\u0430\u043f\u0440\u043e\u0441\u043e\u0432", None))
     # retranslateUi
 

@@ -37,7 +37,7 @@ background-color: #100A29;</string>
    <property name="styleSheet">
     <string notr="true"/>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -512,7 +512,7 @@ QPushButton:hover {
         <string>Рассчитать</string>
        </property>
        <property name="icon">
-        <iconset resource="gui/qtFiles/icons.qrc">
+        <iconset resource="icons.qrc">
          <normaloff>:/icon/calc.png</normaloff>:/icon/calc.png</iconset>
        </property>
        <property name="iconSize">
@@ -561,10 +561,61 @@ font-size:28px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QPushButton" name="btn_results">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>30</y>
+      <width>211</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="acceptDrops">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	font-weight: 700;
+    background-color: #681E76;  /* Ваш цвет из дизайна */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+}
+
+QPushButton:hover {
+    background-color: #C33278;
+}
+
+</string>
+    </property>
+    <property name="text">
+     <string>Результаты запросов</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/icon/calc.png</normaloff>:/icon/calc.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>0</width>
+      <height>16</height>
+     </size>
+    </property>
+   </widget>
   </widget>
  </widget>
  <resources>
-  <include location="gui/qtFiles/icons.qrc"/>
+  <include location="icons.qrc"/>
  </resources>
  <connections/>
 </ui>
